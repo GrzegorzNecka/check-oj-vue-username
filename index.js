@@ -12,5 +12,12 @@ inputUsername();
 
 new Vue({
   el: '#app',
-  data: {}
+  data: {
+    startInputVal: 'username'
+  },
+  methods: {
+    searchText: function(text) {
+      console.log(text);
+    }
+  }
 });
