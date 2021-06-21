@@ -13,11 +13,14 @@ inputUsername();
 new Vue({
   el: '#app',
   data: {
+    members: [...members],
     startInputVal: 'username'
   },
   methods: {
-    searchText: function(text) {
-      console.log(text);
+    getInputVal: function(inputVal) {
+      this.members = [...members];
+
+      console.log(inputVal);
     }
   }
 });
