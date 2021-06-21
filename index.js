@@ -14,13 +14,16 @@ new Vue({
   el: '#app',
   data: {
     members: [...members],
-    startInputVal: 'username'
+    startInputVal: 'username',
+    addMember: false
   },
   methods: {
     getInputVal: function(inputVal) {
       this.members = [...members];
 
       console.log(inputVal);
+
+      this.addMember = true;
     }
   }
 });
