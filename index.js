@@ -42,7 +42,7 @@ new Vue({
         alert(`parametr ${inputVal} już istnieje, podaj nowy paramter`);
         return false;
       } else if (!isAllowChar) {
-        alert(`parametr  możw zawierać liczby litery oraz "-"`);
+        alert(`parametr  może zawierać liczby litery oraz "-"`);
         return false;
       }
 
