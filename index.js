@@ -35,11 +35,17 @@ new Vue({
       const isDuplicate = this.members.filter(member =>
         member.name.includes(inputVal)
       );
+      const regex = /(^[\w\d])([\w\d]+$)|(-[\w\d]+$)+/g;
+      const isAllowChar = regex.test(inputVal);
 
       if (isDuplicate.length) {
         alert(`parametr ${inputVal} już istnieje, podaj nowy paramter`);
         return false;
+      } else if (!isAllowChar) {
+        alert(`parametr  możw zawierać liczby litery oraz "-"`);
+        return false;
       }
+
       return true;
     }
   }
