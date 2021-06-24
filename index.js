@@ -43,11 +43,9 @@ new Vue({
       const isAllowChar = regex.test(inputVal);
 
       if (isDuplicate.length) {
-        this.isValid = false;
         alert(`parametr ${inputVal} już istnieje, podaj nowy paramter`);
         return false;
       } else if (!isAllowChar) {
-        this.isValid = false;
         alert(`parametr  może zawierać liczby litery oraz "-"`);
         return false;
       }
