@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import inputUsername from './inputUsername';
+import membersOutput from './membersOutput';
 
 const members = [
   { name: 'overment' },
@@ -9,21 +10,27 @@ const members = [
 ];
 
 inputUsername();
+membersOutput();
 
 new Vue({
   el: '#app',
   data: {
     members: [...members],
-    startInputVal: 'username',
-    addMember: false
+    value: '',
+    isValid: false
   },
   methods: {
     getInputVal: function(inputVal) {
-      this.members = [...members];
+      // this.members = [...members];
 
       console.log(inputVal);
 
-      this.addMember = true;
+      this.members.push({ name: inputVal });
+
+      this.isValid = true;
+    },
+    resetInputVal: function() {
+      return this.value;
     }
   }
 });
