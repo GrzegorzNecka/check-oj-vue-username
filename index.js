@@ -26,10 +26,8 @@ new Vue({
       }
 
       this.members.push({ name: inputVal });
-
       this.isValid = true;
 
-      return 'ss';
     },
     resetInputVal: function() {
       return this.value;
