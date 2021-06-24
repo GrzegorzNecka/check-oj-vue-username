@@ -35,8 +35,8 @@ new Vue({
       return this.value;
     },
     Validation(inputVal) {
-      const isDuplicate = this.members.filter(member =>
-        member.name.includes(inputVal)
+      const isDuplicate = this.members.filter(
+        member => member.name === inputVal
       );
 
       const regex = /(^[\w\d])([\w\d]+$)|(-[\w\d]+$)+/g;
