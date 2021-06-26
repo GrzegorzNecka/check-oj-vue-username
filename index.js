@@ -20,7 +20,7 @@ new Vue({
     isValid: false
   },
   methods: {
-    getInputVal: function(inputVal) {
+    addMember: function(inputVal) {
       if (!this.validation(inputVal)) {
         return;
       }
