@@ -21,18 +21,17 @@ new Vue({
   },
   methods: {
     getInputVal: function(inputVal) {
-      if (!this.Validation(inputVal)) {
+      if (!this.validation(inputVal)) {
         return;
       }
 
       this.members.push({ name: inputVal });
       this.isValid = true;
-
     },
     resetInputVal: function() {
       return this.value;
     },
-    Validation(inputVal) {
+    validation(inputVal) {
       const isDuplicate = this.members.filter(
         member => member.name === inputVal
       );
